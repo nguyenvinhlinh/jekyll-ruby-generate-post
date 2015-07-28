@@ -12,10 +12,9 @@ ruby generate.rb awesome post name
 ```
 ---
 layout: post
-title: "Backspace issue with using google document by conkeror"
-date: 2014-03-23 15:55:37
-tag: Conkeror, Google Document
-categories: Conkeror
+title: "YOUR POST NAME"
+date: "YYYY-MM-DD HH:MM:SS"
+tag: etc
+categories: etc
 ---
 ```
-
