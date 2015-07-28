@@ -1,4 +1,4 @@
-This ruby script is used to generate jekyll blog  
+*This ruby script is used to generate jekyll blog*   
 1. Generating with no given post title
 ```bash
 ruby generate.rb
