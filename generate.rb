@@ -3,13 +3,13 @@ def main
   fileName = generateFileName(title)
   isFileExist = checkExistFile(fileName)
   if isFileExist == false
-    writeFile(fileName)
+    writeFile(fileName, title)
     p "Write file #{fileName} successfully."
   else
     p "File named #{fileName} exists, press 'y' to replace."
     isReplace = STDIN.gets.chomp
     if isReplace == 'y'
-      writeFile(fileName)
+      writeFile(fileName, title)
       p "Write file #{fileName} successfully."
     else
       p "Exit."
@@ -26,15 +26,15 @@ def readTitle
   title
 end
 
-def writeFile(fileName)
+def writeFile(fileName, title)
   fileReader = open(fileName, 'w')
   fileReader.write("---\n")
   fileReader.write("layout: post\n")
-  fileReader.write("title: #{ARGV.join(" ")}\n")
+  fileReader.write("title: #{title}\n")
   fileReader.write("date: #{Time.new.strftime("%Y-%m-%d %H:%M:%S")}\n")
   fileReader.write("categories: etc\n")
   fileReader.write("tag: etc\n")
-  fileReader.write("---\n")
+  fileReader.write("--- \n")
   fileReader.close
 end
 
