@@ -1,8 +1,7 @@
 def main
   title = readTitle()
   fileName = generateFileName(title)
-  isFileExist = checkExistFile(fileName)
-  if isFileExist == false
+  if !checkExistFile(fileName)
     writeFile(fileName, title)
     p "Write file #{fileName} successfully."
   else
@@ -19,7 +18,7 @@ end
 
 def readTitle
   title = ARGV.join(" ")
-  if title == "" or title == nil
+  if title == "" or title.blank?
     p "Enter post title:  "
     title = STDIN.gets.chomp
   end
