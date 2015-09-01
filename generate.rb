@@ -18,7 +18,7 @@ end
 
 def readTitle
   title = ARGV.join(" ")
-  if title == "" or title.blank?
+  if title == "" or title.nil?
     p "Enter post title:  "
     title = STDIN.gets.chomp
   end
